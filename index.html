@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Parallax</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./imgs/stars.png" alt="stars" id="stars">
+        <img src="./imgs/moon.png" alt="moon" id="moon">
+        <img src="./imgs/mountains_behind.png" alt="mountains_behind" id="mountains_behind">
+        <h2 id="text">André Denadai</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="./imgs/mountains_front.png" alt="mountains_front" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi exercitationem pariatur qui tempore, iure optio cupiditate earum nisi sapiente dolorum? Consequatur a iure neque. Laborum aperiam voluptates dignissimos quis aut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut provident dolorum autem dolor, nam, quo veritatis vitae exercitationem voluptate quia delectus quos maiores minima deleniti pariatur reprehenderit eaque tempore nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure modi dolorum dolores aspernatur a. Fugit modi maxime quos ex, aut ad, enim voluptatibus quasi deleniti, dolorem eum fugiat. Exercitationem, ex?<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure laborum nisi itaque animi temporibus repudiandae in. Asperiores at magni tempore consequuntur veniam, quam sequi similique maxime soluta quaerat. Atque, molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime nostrum nam dolorem est? Beatae cupiditate, nisi odit commodi ipsa maiores libero delectus aliquam ullam, quo, ab deserunt perspiciatis quisquam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita animi a error quibusdam laborum beatae, aliquam modi commodi voluptates magni fugiat ex ratione cupiditate. Velit assumenda veniam ex modi voluptates!<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure laborum nisi itaque animi temporibus repudiandae in. Asperiores at magni tempore consequuntur veniam, quam sequi similique maxime soluta quaerat. Atque, molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime nostrum nam dolorem est? Beatae cupiditate, nisi odit commodi ipsa maiores libero delectus aliquam ullam, quo, ab deserunt perspiciatis quisquam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita animi a error quibusdam laborum beatae, aliquam modi commodi voluptates magni fugiat ex ratione cupiditate. Velit assumenda veniam ex modi voluptates! <br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure laborum nisi itaque animi temporibus repudiandae in. Asperiores at magni tempore consequuntur veniam, quam sequi similique maxime soluta quaerat. Atque, molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime nostrum nam dolorem est? Beatae cupiditate, nisi odit commodi ipsa maiores libero delectus aliquam ullam, quo, ab deserunt perspiciatis quisquam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita animi a error quibusdam laborum beatae, aliquam modi commodi voluptates magni fugiat ex ratione cupiditate. Velit assumenda veniam ex modi voluptates!<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure laborum nisi itaque animi temporibus repudiandae in. Asperiores at magni tempore consequuntur veniam, quam sequi similique maxime soluta quaerat. Atque, molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime nostrum nam dolorem est? Beatae cupiditate, nisi odit commodi ipsa maiores libero delectus aliquam ullam, quo, ab deserunt perspiciatis quisquam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita animi a error quibusdam laborum beatae, aliquam modi commodi voluptates magni fugiat ex ratione cupiditate. Velit assumenda veniam ex modi voluptates! <br><br></p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+</body>
+</html>
