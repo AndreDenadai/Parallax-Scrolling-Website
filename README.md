@@ -1,7 +1,7 @@
 # Parallax-Scrolling-Website
 #### Hi !!👋
 
-#### I'm André and this project is a web page with Parallax Scrolling Moon Light effect just using HTML + CSS + JS.
+#### I'm André and this project is a web page with Parallax Scrolling Moon Light effect just using HTML + CSS.
 
 I hope you enjoy it!
 
